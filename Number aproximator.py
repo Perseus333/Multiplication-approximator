@@ -15,7 +15,7 @@ def ten_rounder(number):
 
 
 def difference_between_ten(number, ten):
-    return abs(ten - number)
+    return round(abs(ten - number))
 
 
 # To choose between a random number and pre-selected numbers
@@ -81,6 +81,9 @@ final_relative_difference = round((final_difference / real_value) * 100, 2)
 print(f'Number 1 was: {number1}')
 print(f'Number 2 was: {number2}')
 print('-------------')
+print(f'Number 1 has been transformed into {easy_number1}')
+print(f'Number 2 has been transformed into {easy_number2}')
+print(' ')
 print(f'Approximate value was: {final_output}')
 print(f'Real value was: {real_value}')
 print(f'The difference was: {final_difference}')
