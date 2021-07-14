@@ -6,7 +6,7 @@ type_of_numbers = str(input('> ')).lower()
 
 
 def random_decimal():
-    return random.uniform(0.1, 99.9)
+    return round(random.uniform(0.1, 99.9), 2)
 
 
 def ten_rounder(number):
@@ -22,9 +22,10 @@ def difference_between_ten(number, ten):
 if type_of_numbers == 'r':
     number1 = random_decimal()
     number2 = random_decimal()
+    print(f'Number 1 was: {number1}')
+    print(f'Number 2 was: {number2}')
 
 elif type_of_numbers == 'm':
-    print('It is recommended to insert a value smaller than 100')
     number1 = input('Write the first number: ')
     number2 = input('Write the second number: ')
     number1 = number1.replace(',', '.')
@@ -36,6 +37,8 @@ else:
     print('You can only select one of two values: "R" for random or "M" to select them manually')
     number1 = random_decimal()
     number2 = random_decimal()
+    print(f'Number 1 was: {number1}')
+    print(f'Number 2 was: {number2}')
 
 
 number1_rounded = ten_rounder(number1)
@@ -78,8 +81,6 @@ final_difference = round(abs(real_value - final_output), 2)
 final_relative_difference = round((final_difference / real_value) * 100, 2)
 
 
-print(f'Number 1 was: {number1}')
-print(f'Number 2 was: {number2}')
 print('-------------')
 print(f'Number 1 has been transformed into {easy_number1}')
 print(f'Number 2 has been transformed into {easy_number2}')
